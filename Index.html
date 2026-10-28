@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>على الجاهز | قسمك الإبداعي حسب الطلب</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#121212',
+                            card: '#202020',
+                            lime: '#D7FF38',
+                            limeHover: '#c4ed2d',
+                            textMain: '#FFFFFF',
+                            textSub: '#A3A3A3',
+                            border: '#2A2A2A',
+                            borderHover: '#3D3D3D'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-bg text-brand-textMain antialiased selection:bg-brand-lime selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bw-glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="w-11 h-11 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black shadow-lg group-hover:scale-105 transition-transform">
+                            ⚡
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-black tracking-tight text-white leading-none">على <span class="text-brand-lime">الجاهز</span></span>
+                            <span class="text-[10px] font-bold text-brand-textSub tracking-wider uppercase mt-1">Creative Dept On-Demand</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-reverse space-x-8 text-sm font-bold text-brand-textSub">
+                    <a href="#about" class="hover:text-brand-lime transition-colors">عن الشركة</a>
+                    <a href="#services" class="hover:text-brand-lime transition-colors">الخدمات والمصممون</a>
+                    <a href="#how-it-works" class="hover:text-brand-lime transition-colors">كيف نعمل</a>
+                    <a href="#pricing" class="hover:text-brand-lime transition-colors">الباقات</a>
+                    <a href="#dashboard-demo" class="hover:text-brand-lime transition-colors flex items-center gap-1.5">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-lime opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-lime"></span>
+                        </span>
+                        تجربة المنصة
+                    </a>
+                </nav>
+
+                <!-- Direct Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/201035193743" target="_blank" class="px-4 py-2.5 rounded-xl text-xs font-bold text-black bg-brand-lime hover:bg-brand-limeHover transition-all flex items-center gap-2 shadow-md">
+                        <i class="fa-brands fa-whatsapp text-base"></i> 01035193743
+                    </a>
+                    <a href="#pricing" class="px-4 py-2.5 rounded-xl text-xs font-bold text-white border border-brand-border hover:border-brand-lime transition-all">
+                        اشترك الآن
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg text-white hover:bg-brand-card">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-brand-border bg-brand-bg px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-base font-bold text-brand-textSub hover:text-white">عن الشركة</a>
+            <a href="#services" class="block py-2 text-base font-bold text-brand-textSub hover:text-white">الخدمات والمصممون</a>
+            <a href="#how-it-works" class="block py-2 text-base font-bold text-brand-textSub hover:text-white">كيف نعمل</a>
+            <a href="#pricing" class="block py-2 text-base font-bold text-brand-textSub hover:text-white">الباقات</a>
+            <a href="#dashboard-demo" class="block py-2 text-base font-bold text-brand-textSub hover:text-white">تجربة المنصة</a>
+            <div class="pt-3 border-t border-brand-border flex flex-col gap-2">
+                <a href="https://wa.me/201035193743" target="_blank" class="w-full text-center py-2.5 rounded-xl font-bold text-black bg-brand-lime">
+                    <i class="fa-brands fa-whatsapp ml-1"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-brand-border text-brand-textSub text-xs font-semibold">
+                        <span class="bg-brand-lime text-black text-[10px] px-2 py-0.5 rounded-full uppercase font-black">جديد</span>
+                        الفريق الإبداعي الكامل لشركتك بدون تكاليف توظيف تقليدية ⚡
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight sm:leading-none">
+                        فريقك الإبداعي الكامل... <br>
+                        <span class="text-brand-lime">على الجاهز!</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-brand-textSub font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        بدل ما توظف 3 موظفين برواتب ضخمة.. احصل على فريق إبداعي متكامل شامل <strong class="text-white font-bold">مصممي الجرافيك، المونتيرين، أخصائي الـ AI والمبرمجين</strong> باشتراك شهري واحد وقدرة تنفيذية مستمرة.
+                    </p>
+
+                    <!-- Contact Details Banner -->
+                    <div class="bg-brand-card p-4 rounded-2xl border border-brand-border flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+                        <div class="flex items-center gap-2 text-brand-textSub">
+                            <i class="fa-solid fa-envelope text-brand-lime"></i>
+                            <span>rawancoding1272007@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-brand-textSub">
+                            <i class="fa-brands fa-whatsapp text-brand-lime"></i>
+                            <span>01035193743</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#dashboard-demo" onclick="switchTab('client')" class="px-8 py-4 rounded-xl font-bold text-lg text-black bg-brand-lime hover:bg-brand-limeHover shadow-xl transition-all text-center lime-glow">
+                            قدم طلبك الإبداعي الآن
+                        </a>
+                        <a href="#services" class="px-8 py-4 rounded-xl font-bold text-lg text-white bg-brand-card hover:bg-brand-border border border-brand-border transition-all text-center">
+                            استعرض خدمات المصممين
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="custom-card rounded-2xl p-6 shadow-2xl">
+                            <div class="flex items-center justify-between pb-4 border-b border-brand-border">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-brand-lime"></div>
+                                    <div class="w-3 h-3 rounded-full bg-brand-textSub"></div>
+                                    <div class="w-3 h-3 rounded-full bg-brand-border"></div>
+                                </div>
+                                <span class="text-xs text-brand-textSub font-mono">Creative Operations Center</span>
+                            </div>
+
+                            <!-- Live Team Dashboard Mock -->
+                            <div class="mt-6 space-y-3">
+                                <div class="bg-brand-bg p-3.5 rounded-xl border border-brand-border flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-lg bg-brand-lime text-black flex items-center justify-center font-bold">
+                                            <i class="fa-solid fa-pen-nib text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-white">هوية بصرية كاملة</div>
+                                            <div class="text-[11px] text-brand-textSub">روان محمد • AI & Illustrator</div>
+                                        </div>
+                                    </div>
+                                    <span class="px-2 py-1 rounded text-[10px] font-bold bg-brand-lime text-black">جاهز</span>
+                                </div>
+
+                                <div class="bg-brand-bg p-3.5 rounded-xl border border-brand-border flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-lg bg-brand-card text-brand-lime flex items-center justify-center font-bold border border-brand-border">
+                                            <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-white">فيديو ذكاء اصطناعي AI</div>
+                                            <div class="text-[11px] text-brand-textSub">روان محمد • Midjourney & Runway</div>
+                                        </div>
+                                    </div>
+                                    <span class="px-2 py-1 rounded text-[10px] font-bold border border-brand-lime text-brand-lime">قيد التنفيذ</span>
+                                </div>
+
+                                <div class="bg-brand-bg p-3.5 rounded-xl border border-brand-border flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-lg bg-brand-card text-white flex items-center justify-center font-bold border border-brand-border">
+                                            <i class="fa-solid fa-film text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs font-bold text-white">مونتاج إعلان ريلز سينمائي</div>
+                                            <div class="text-[11px] text-brand-textSub">منة الصاوي • Premiere Pro</div>
+                                        </div>
+                                    </div>
+                                    <span class="px-2 py-1 rounded text-[10px] font-bold border border-brand-border text-brand-textSub">مراجعة الجودة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Individual Graphic & Creative Services Section -->
+    <section id="services" class="py-20 bg-brand-bg border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-brand-lime">فريقنا ومجالات التخصص</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2">خدماتنا الإبداعية حسب المصمم والأدوات</h2>
+                <p class="text-brand-textSub mt-3 text-sm">كل خدمة يترأسها مصمم متخصص ومحترف باستخدام أحدث البرامج العالمية.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Service 1: Branding -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">تصميم الهويات البصرية والبراندنج</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">بناء الهويات الشاملة، تصميم اللوجو، أدلة الشعار (Brand Guidelines)، والخطوط والألوان.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">المصمم المسؤول:</span>
+                            <span class="font-black text-brand-lime">منة الصاوي</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono"><i class="fa-solid fa-pen text-brand-lime ml-1"></i>Illustrator</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono"><i class="fa-solid fa-image text-brand-lime ml-1"></i>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Social Media & Ads -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">تصاميم السوشيال ميديا والإعلانات</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">بوستات إعلانية عالية التحويل، تصاميم الحملات الترويجية، استوريات وستوري بورد سوشيال.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">المصمم المسؤول:</span>
+                            <span class="font-black text-brand-lime">شذى حسين</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Photoshop</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Illustrator</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Canva Pro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: UI/UX & Web Design -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">تصميم واجهات المستخدم والمواقع UI/UX</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">تصميم صفحات الهبوط، واجهات التطبيقات والمواقع الإلكترونية، وتجارب التصفح السلسة.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">المصمم والمبرمج:</span>
+                            <span class="font-black text-brand-lime">روان محمد</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Figma</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Adobe XD</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">HTML/Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Print & Packaging -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">المطبوعات والتغليف والمنيو</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">تصميم العلب والعبوات (Packaging)، الكتالوجات، المنيو للمطاعم، وتصاميم الطباعة الجاهزة.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">المصمم المسؤول:</span>
+                            <span class="font-black text-brand-lime">عبدالغفار</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Adobe InDesign</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Illustrator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Motion Graphics -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">الموشن جرافيك والإنيميشن 2D</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">تحريك اللوجوهات، الفيديوهات التوضيحية (Explainer Videos)، والإنيميشن الإعلاني الممتع.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">المصمم والأنيميتور:</span>
+                            <span class="font-black text-brand-lime"> مروان محمد</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">After Effects</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Illustrator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: AI Videos -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-white">فيديوهات الذكاء الاصطناعي (AI)</h3>
+                    <p class="text-xs text-brand-textSub mt-2 leading-relaxed">توليد أفاتار متكلم، دبلجة صوتية بدقة عالية، وإنتاج مشاهد سينمائية فورية بالـ AI.</p>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border">
+                        <div class="flex items-center justify-between text-xs mb-2">
+                            <span class="text-brand-textSub font-bold">أخصائي الـ AI:</span>
+                            <span class="font-black text-brand-lime">ياسين يحي</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Midjourney</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Runway ML</span>
+                            <span class="px-2 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">ElevenLabs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 7: Video Editing -->
+                <div class="custom-card p-6 rounded-2xl relative overflow-hidden group lime-border-glow transition-all lg:col-span-3">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-lime text-black flex items-center justify-center text-xl font-black shrink-0">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-white">المونتاج وصناعة الفيديو والريلز (Video Editing)</h3>
+                                <p class="text-xs text-brand-textSub mt-1 max-w-2xl">تقطيع المونتاج الاحترافي، إضافة المؤثرات البصرية والصوتية، هندسة الصوت، وتعديل الألوان السينمائي للريلز والتيك توك والإعلانات.</p>
+                            </div>
+                        </div>
+
+                        <div class="md:text-left border-t md:border-t-0 md:border-r border-brand-border pt-4 md:pt-0 md:pr-6">
+                            <div class="text-xs text-brand-textSub mb-1">المونتير المسؤول: <strong class="text-brand-lime font-black">روان محمد</strong></div>
+                            <div class="flex flex-wrap gap-1.5 mt-2 justify-start md:justify-end">
+                                <span class="px-2.5 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">Adobe Premiere Pro</span>
+                                <span class="px-2.5 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">CapCut Pro</span>
+                                <span class="px-2.5 py-1 rounded bg-brand-bg text-[10px] text-white border border-brand-border font-mono">DaVinci Resolve</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono font-bold text-brand-lime uppercase">لماذا اختيار على الجاهز؟</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">البديل الأذكى للتوظيف التقليدي</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Old Way -->
+                <div class="custom-card p-8 rounded-2xl border-brand-border opacity-70">
+                    <div class="text-xs font-mono font-bold text-brand-textSub mb-2">الطريقة التقليدية ❌</div>
+                    <h3 class="text-xl font-bold text-white mb-4">التوظيف الداخلي أو الفريلانسرز</h3>
+                    <ul class="space-y-3 text-sm text-brand-textSub">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> رواتب مرتفعة تزيد عن 30,000 ج.م شهرياً لـ 3 موظفين.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> تأمينات، تجهيز مكاتب، وأجهزة كمبيوتر باهظة.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-400"></i> مخاطر عدم الالتزام والتأخير في المواعيد.</li>
+                    </ul>
+                </div>
+
+                <!-- On The Ready Way -->
+                <div class="custom-card p-8 rounded-2xl border-brand-lime relative lime-glow">
+                    <div class="text-xs font-mono font-bold text-brand-lime mb-2">مع "على الجاهز" ⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-4">قسمك الإبداعي On-Demand</h3>
+                    <ul class="space-y-3 text-sm text-brand-textMain">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> باقة شهري تبدأ من 6,000 ج.م فقط بدون التزامات.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> فريق كامل: جرافيك، مونتاج، AI، وبرمجة تحت إدارتنا.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> تحويل مباشر للطلبات للواتساب والإيميل لسرعة المتابعة.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (4 Steps) -->
+    <section id="how-it-works" class="py-20 bg-brand-bg border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">4 خطوات بسيطة لإنجاز أعمالك الإبداعية</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="custom-card p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-lime text-black font-black text-lg flex items-center justify-center mb-4">01</div>
+                    <h4 class="font-bold text-white mb-2">اختر الباقة</h4>
+                    <p class="text-xs text-brand-textSub">اختر الباقة الشهرية التي تناسب حجم إنتاج شركتك.</p>
+                </div>
+                <div class="custom-card p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-lime text-black font-black text-lg flex items-center justify-center mb-4">02</div>
+                    <h4 class="font-bold text-white mb-2">قدم الطلب والمصمم</h4>
+                    <p class="text-xs text-brand-textSub">ارسل طلبك وحدد الخدمة والمصمم وسيصل فوراً للواتساب.</p>
+                </div>
+                <div class="custom-card p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-lime text-black font-black text-lg flex items-center justify-center mb-4">03</div>
+                    <h4 class="font-bold text-white mb-2">التنفيذ والمتابعة</h4>
+                    <p class="text-xs text-brand-textSub">يبدأ المصمم المختص فوراً ويطلعك على التقدم.</p>
+                </div>
+                <div class="custom-card p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-brand-lime text-black font-black text-lg flex items-center justify-center mb-4">04</div>
+                    <h4 class="font-bold text-white mb-2">التسليم والتعديل</h4>
+                    <p class="text-xs text-brand-textSub">استلم الملفات بجودة عالية مع تنفيذ كافة التعديلات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">باقات الاشتراكات الشهرية</h2>
+                <p class="text-xs text-brand-textSub mt-2">أسعار افتراضية مرنة تناسب حجم ونشاط كل شركة</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Plan 1 -->
+                <div class="custom-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono font-bold text-brand-lime mb-2">Starter</div>
+                        <div class="text-3xl font-black mb-4 text-white">6,000 <span class="text-xs text-brand-textSub">ج.م / شهرياً</span></div>
+                        <ul class="space-y-3 text-xs text-brand-textSub border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> 5 تصاميم جرافيك متنوعة</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> 2 فيديو ريلز / شورتس</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> تعديلات مجانية متفق عليها</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> دعم عبر الواتساب والبريد</li>
+                        </ul>
+                    </div>
+                    <button onclick="openSubscribeModal('Starter', '6,000')" class="mt-8 w-full py-3 rounded-xl font-bold text-xs bg-brand-card hover:bg-brand-border text-white border border-brand-border transition-all">
+                        اختيار الباقة
+                    </button>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="custom-card rounded-3xl p-8 flex flex-col justify-between border-brand-lime relative lime-glow">
+                    <div class="absolute -top-3 right-6 bg-brand-lime text-black px-3 py-0.5 rounded-full text-[10px] font-black">الأكثر طلباً</div>
+                    <div>
+                        <div class="text-xs font-mono font-bold text-brand-lime mb-2">Growth</div>
+                        <div class="text-3xl font-black mb-4 text-white">12,000 <span class="text-xs text-brand-textSub">ج.م / شهرياً</span></div>
+                        <ul class="space-y-3 text-xs text-brand-textMain border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> 15 تصميم جرافيك شامل</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> 6 فيديوهات مونتاج احترافي</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> فيديوهات ذكاء اصطناعي AI</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> تصميم واجهات مواقع ودعم أولوية</li>
+                        </ul>
+                    </div>
+                    <button onclick="openSubscribeModal('Growth', '12,000')" class="mt-8 w-full py-3 rounded-xl font-bold text-xs bg-brand-lime text-black hover:bg-brand-limeHover transition-all">
+                        اختيار الباقة
+                    </button>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="custom-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono font-bold text-brand-lime mb-2">Business</div>
+                        <div class="text-3xl font-black mb-4 text-white">20,000 <span class="text-xs text-brand-textSub">ج.م / شهرياً</span></div>
+                        <ul class="space-y-3 text-xs text-brand-textSub border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> إنتاج جرافيك ومطبوعات موسع</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> مونتاج ريلز وإعلانات سينمائي</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> تطوير موقع كامل وتسليم سريع</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime"></i> مدير حساب مخصص</li>
+                        </ul>
+                    </div>
+                    <button onclick="openSubscribeModal('Business', '20,000')" class="mt-8 w-full py-3 rounded-xl font-bold text-xs bg-brand-card hover:bg-brand-border text-white border border-brand-border transition-all">
+                        اختيار الباقة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard & Order Submission Portal -->
+    <section id="dashboard-demo" class="py-20 bg-brand-bg border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-mono font-bold text-brand-lime uppercase">تقديم الطلبات والمتابعة المباشرة</span>
+                <h2 class="text-3xl font-black text-white mt-2">نظام إدارة الطلبات والمشاريع</h2>
+
+                <!-- Tab Controls -->
+                <div class="flex justify-center items-center gap-2 mt-6 bg-brand-card p-1 rounded-xl max-w-xs mx-auto border border-brand-border">
+                    <button id="tab-client-btn" onclick="switchTab('client')" class="flex-1 py-2 px-4 rounded-lg font-bold text-xs bg-brand-lime text-black transition-all">
+                        بوابة العميل
+                    </button>
+                    <button id="tab-admin-btn" onclick="switchTab('admin')" class="flex-1 py-2 px-4 rounded-lg font-bold text-xs text-brand-textSub hover:text-white transition-all">
+                        لوحة الإدارة
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT: CLIENT PORTAL -->
+            <div id="client-portal-view" class="custom-card rounded-3xl p-6 sm:p-8">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 mb-6 border-b border-brand-border gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">تقديم طلب إبداعي جديد</h3>
+                        <p class="text-xs text-brand-textSub mt-1">يُوجه الطلب مباشرة للإيميل (rawancoding1272007@gmail.com) والواتساب (01035193743)</p>
+                    </div>
+                    <button onclick="toggleNewRequestForm()" class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-lime text-black hover:bg-brand-limeHover">
+                        <i class="fa-solid fa-plus ml-1"></i> طلب جديد
+                    </button>
+                </div>
+
+                <!-- New Request Interactive Form -->
+                <div id="new-request-form" class="mb-8 bg-brand-bg p-6 rounded-2xl border border-brand-border">
+                    <form onsubmit="handleNewRequest(event)" class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-brand-textSub mb-1">عنوان الطلب / المشروع</label>
+                            <input type="text" id="req-title" required placeholder="مثال: هوية بصرية كاملة لمطعم" class="w-full px-4 py-2.5 rounded-xl bg-brand-card border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-brand-textSub mb-1">الخدمة والمصمم المسؤول</label>
+                            <select id="req-type" class="w-full px-4 py-2.5 rounded-xl bg-brand-card border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                                <option value="هويات بصرية وترسيم براندنج (المصمم: روان محمد)">هويات بصرية وترسيم براندنج (المصمم: روان محمد)</option>
+                                <option value="تصاميم سوشيال ميديا وإعلانات (المصمم: سارة محمود)">تصاميم سوشيال ميديا وإعلانات (المصمم: سارة محمود)</option>
+                                <option value="تصميم واجهات مواقع UI/UX (المصمم: روان محمد)">تصميم واجهات مواقع UI/UX (المصمم: روان محمد)</option>
+                                <option value="مطبوعات وتغليف ومنيو (المصمم: عمر الشريف)">مطبوعات وتغليف ومنيو (المصمم: عمر الشريف)</option>
+                                <option value="موشن جرافيك 2D (المصمم: أحمد علي)">موشن جرافيك 2D (المصمم: أحمد علي)</option>
+                                <option value="فيديوهات ذكاء اصطناعي AI (أخصائي: كريم حسن)">فيديوهات ذكاء اصطناعي AI (أخصائي: كريم حسن)</option>
+                                <option value="مونتاج فيديو وريندر سينمائي (المونتير: خلود خالد)">مونتاج فيديو وريندر سينمائي (المونتير: خلود خالد)</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-brand-textSub mb-1">التفاصيل والشروط الخاصة بالطلب</label>
+                            <textarea id="req-desc" rows="3" required placeholder="اكتب وصف الطلب، الملاحظات، والنصوص المطلوبة بالتفصيل..." class="w-full px-4 py-2.5 rounded-xl bg-brand-card border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-brand-textSub mb-1">رابط المراجع والملفات (Drive / Figma / Pinterest)</label>
+                            <input type="url" id="req-link" placeholder="https://drive.google.com/..." class="w-full px-4 py-2.5 rounded-xl bg-brand-card border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                        </div>
+                        <div class="sm:col-span-2 flex justify-end gap-3 pt-2">
+                            <button type="submit" class="px-6 py-2.5 rounded-xl text-xs font-bold bg-brand-lime text-black hover:bg-brand-limeHover">
+                                إرسال الطلب فوراً عبر WhatsApp و Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Client Tasks Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right border-collapse">
+                        <thead>
+                            <tr class="bg-brand-bg text-brand-textSub text-xs font-bold border-b border-brand-border">
+                                <th class="p-3">الكود</th>
+                                <th class="p-3">المشروع</th>
+                                <th class="p-3">الخدمة والمصمم</th>
+                                <th class="p-3">الحالة</th>
+                                <th class="p-3">المتابعة المباشرة</th>
+                            </tr>
+                        </thead>
+                        <tbody id="client-tasks-body" class="text-xs divide-y divide-brand-border">
+                            <!-- Dynamic Content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT: ADMIN PORTAL -->
+            <div id="admin-portal-view" class="hidden custom-card rounded-3xl p-6 sm:p-8">
+                <h3 class="text-lg font-bold text-white mb-6">لوحة الإدارة وتوزيع المهام الإبداعية</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border">
+                        <div class="text-xs font-bold text-brand-lime mb-3">طلبات جديدة قيد الانتظار</div>
+                        <div id="admin-pending-tasks" class="space-y-2"></div>
+                    </div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border">
+                        <div class="text-xs font-bold text-white mb-3">قيد التنفيذ مع المصمم</div>
+                        <div class="p-3 bg-brand-card rounded-lg border border-brand-border text-xs">
+                            <div class="font-bold text-white">تصميم بروفايل الشركة ومطبوعات</div>
+                            <div class="text-brand-textSub mt-1">المسؤول: عمر الشريف (InDesign)</div>
+                        </div>
+                    </div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border">
+                        <div class="text-xs font-bold text-brand-textSub mb-3">تم التسليم والاعتماد النهائي</div>
+                        <div class="p-3 bg-brand-card rounded-lg border border-brand-border text-xs">
+                            <div class="font-bold text-white">فيديو موشن جرافيك 15 ثانية</div>
+                            <div class="text-brand-textSub mt-1">المسؤول: أحمد علي (After Effects)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales & Call Center CAC Calculator -->
+    <section class="py-20 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-mono font-bold text-brand-lime uppercase">حاسبة الأداء المالي والمبيعات</span>
+                    <h2 class="text-3xl font-black text-white mt-2">قياس تكلفة استقطاب العملاء (CAC)</h2>
+                    <p class="text-brand-textSub text-sm mt-4 leading-relaxed">
+                        استخدم الحسابات التفاعلية لتقدير عدد العملاء المستهدفين والمبيعات المتوقعة من فريق المبيعات والمكالمات.
+                    </p>
+                </div>
+
+                <div class="custom-card p-6 rounded-2xl">
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span>عدد المكالمات اليومية للموظف:</span>
+                                <span id="calc-calls-val" class="font-mono text-brand-lime">40 مكالمة</span>
+                            </div>
+                            <input type="range" id="calc-calls" min="10" max="100" value="40" oninput="calculateSalesMetrics()" class="w-full accent-brand-lime bg-brand-bg rounded-lg h-1.5">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span>نسبة التحويل (Conversion Rate):</span>
+                                <span id="calc-rate-val" class="font-mono text-brand-lime">5%</span>
+                            </div>
+                            <input type="range" id="calc-rate" min="1" max="15" value="5" oninput="calculateSalesMetrics()" class="w-full accent-brand-lime bg-brand-bg rounded-lg h-1.5">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold mb-2">الباقة المبيعة</label>
+                            <select id="calc-price" onchange="calculateSalesMetrics()" class="w-full bg-brand-bg text-white border border-brand-border rounded-xl px-3 py-2 text-xs focus:border-brand-lime focus:outline-none">
+                                <option value="6000">Starter (6,000 ج.م)</option>
+                                <option value="12000" selected>Growth (12,000 ج.م)</option>
+                                <option value="20000">Business (20,000 ج.م)</option>
+                            </select>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-brand-bg border border-brand-border grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-[10px] text-brand-textSub">العملاء شهرياً</div>
+                                <div id="res-clients" class="text-xl font-black text-white mt-1">4 عملاء</div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-brand-textSub">الإيراد الشهري</div>
+                                <div id="res-revenue" class="text-xl font-black text-brand-lime mt-1">48,000 ج.م</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-bg text-brand-textSub py-12 border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded bg-brand-lime text-black flex items-center justify-center font-black">⚡</div>
+                    <span class="text-base font-bold text-white">على الجاهز</span>
+                </div>
+                <div>
+                    الإيميل: rawancoding1272007@gmail.com | الواتساب: 01035193743
+                </div>
+                <div>
+                    جميع الحقوق محفوظة © <span id="current-year"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Subscription Modal -->
+    <div id="sub-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="custom-card rounded-2xl max-w-md w-full p-6 text-right relative border-brand-lime">
+            <button onclick="closeSubscribeModal()" class="absolute top-4 left-4 text-brand-textSub hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 class="text-lg font-bold text-white mb-2">طلب الاشتراك في باقة <span id="modal-plan-name" class="text-brand-lime">Starter</span></h3>
+            <p class="text-xs text-brand-textSub mb-4">السعر: <span id="modal-plan-price" class="text-white font-bold">6,000</span> ج.م / شهرياً</p>
+
+            <form onsubmit="handleSubscriptionSubmit(event)" class="space-y-3">
+                <input type="text" id="sub-company" required placeholder="اسم الشركة" class="w-full px-4 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                <input type="text" id="sub-name" required placeholder="الاسم بالكامل" class="w-full px-4 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                <input type="tel" id="sub-phone" required placeholder="رقم الهاتف" class="w-full px-4 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-white text-xs focus:border-brand-lime focus:outline-none">
+                <button type="submit" class="w-full py-3 rounded-xl font-bold text-xs bg-brand-lime text-black hover:bg-brand-limeHover transition-all">
+                    تأكيد وإرسال عبر الواتساب والإيميل
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 bg-brand-lime text-black px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none text-xs font-bold">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-msg">تم تنفيذ العملية بنجاح!</span>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
